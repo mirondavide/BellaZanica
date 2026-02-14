@@ -34,24 +34,6 @@ function closeMobileMenu() {
   closeIcon.style.display = 'none';
 }
 
-// Menu tabs
-const tabBtns = document.querySelectorAll('.tab-btn');
-const tabContents = document.querySelectorAll('.tab-content');
-
-tabBtns.forEach(btn => {
-  btn.addEventListener('click', () => {
-    const tab = btn.dataset.tab;
-
-    tabBtns.forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-
-    tabContents.forEach(content => {
-      content.classList.remove('active');
-    });
-    document.getElementById('tab-' + tab).classList.add('active');
-  });
-});
-
 // Smooth scroll offset for fixed navbar
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
@@ -86,7 +68,7 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 // Observe all sections and cards for animation
-document.querySelectorAll('.section, .feature-card, .service-card, .menu-item, .review-card, .orari-card').forEach(el => {
+document.querySelectorAll('.section, .feature-card, .service-card, .gallery-item, .review-card, .orari-card').forEach(el => {
   el.classList.add('animate-on-scroll');
   observer.observe(el);
 });
