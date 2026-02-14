@@ -50,14 +50,18 @@
     <div class="nav-container">
       <a href="#" class="nav-brand">Bella Zanica</a>
       <div class="nav-links" id="nav-links">
-        <a href="#chi-siamo">Chi Siamo</a>
-        <a href="#menu">Menu</a>
-        <a href="#orari">Orari</a>
-        <a href="#contatti">Contatti</a>
+        <a href="#chi-siamo" data-i18n="nav.about">Chi Siamo</a>
+        <a href="#menu" data-i18n="nav.menu">Menu</a>
+        <a href="#orari" data-i18n="nav.hours">Orari</a>
+        <a href="#contatti" data-i18n="nav.contact">Contatti</a>
+      </div>
+      <div class="lang-toggle">
+        <button class="lang-btn active" data-lang="it">IT</button>
+        <button class="lang-btn" data-lang="en">EN</button>
       </div>
       <a href="tel:+39035670917" class="nav-cta">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        Chiama
+        <span data-i18n="nav.call">Chiama</span>
       </a>
       <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="hamburger-icon"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
@@ -66,13 +70,17 @@
     </div>
     <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobile-menu">
-      <a href="#chi-siamo" onclick="closeMobileMenu()">Chi Siamo</a>
-      <a href="#menu" onclick="closeMobileMenu()">Menu</a>
-      <a href="#orari" onclick="closeMobileMenu()">Orari</a>
-      <a href="#contatti" onclick="closeMobileMenu()">Contatti</a>
+      <a href="#chi-siamo" onclick="closeMobileMenu()" data-i18n="nav.about">Chi Siamo</a>
+      <a href="#menu" onclick="closeMobileMenu()" data-i18n="nav.menu">Menu</a>
+      <a href="#orari" onclick="closeMobileMenu()" data-i18n="nav.hours">Orari</a>
+      <a href="#contatti" onclick="closeMobileMenu()" data-i18n="nav.contact">Contatti</a>
+      <div class="lang-toggle mobile-lang-toggle">
+        <button class="lang-btn active" data-lang="it">IT</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+      </div>
       <a href="tel:+39035670917" class="mobile-cta" onclick="closeMobileMenu()">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        Chiama Ora
+        <span data-i18n="nav.callNow">Chiama Ora</span>
       </a>
     </div>
   </nav>
@@ -83,7 +91,7 @@
     <div class="hero-content">
       <span class="hero-eyebrow">Pizzeria</span>
       <h1 class="hero-title">Bella Zanica</h1>
-      <p class="hero-location">Zanica (BG) &mdash; Dal cuore della tradizione italiana</p>
+      <p class="hero-location" data-i18n="hero.location">Zanica (BG) &mdash; Dal cuore della tradizione italiana</p>
       <div class="hero-rating">
         <div class="stars">
           <svg class="star-icon filled" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
@@ -95,8 +103,8 @@
         <span>4.5/5 &mdash; Google Reviews</span>
       </div>
       <div class="hero-buttons">
-        <a href="#chi-siamo" class="btn btn-primary btn-lg">Scopri di Pi&ugrave;</a>
-        <a href="tel:+39035670917" class="btn btn-outline btn-lg">Chiamaci</a>
+        <a href="#chi-siamo" class="btn btn-primary btn-lg" data-i18n="hero.cta1">Scopri di Pi&ugrave;</a>
+        <a href="tel:+39035670917" class="btn btn-outline btn-lg" data-i18n="hero.cta2">Chiamaci</a>
       </div>
       <a href="#chi-siamo" class="hero-scroll-down" aria-label="Scorri">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
@@ -107,30 +115,30 @@
   <!-- Chi Siamo -->
   <section id="chi-siamo" class="section">
     <div class="container">
-      <span class="eyebrow">Chi Siamo</span>
-      <h2>Tradizione e Passione</h2>
-      <p class="section-text">Bella Zanica &egrave; il cuore gastronomico di Zanica. Un luogo dove la tradizione incontra l'arte della pizza, creando un'esperienza unica per famiglie e amici. Dal nostro forno a legna escono pizze fragranti, calzoni ripieni, kebab e tante altre specialit&agrave; preparate con passione e ingredienti di prima qualit&agrave;.</p>
+      <span class="eyebrow" data-i18n="about.eyebrow">Chi Siamo</span>
+      <h2 data-i18n="about.title">Tradizione e Passione</h2>
+      <p class="section-text" data-i18n="about.text">Bella Zanica &egrave; il cuore gastronomico di Zanica. Un luogo dove la tradizione incontra l'arte della pizza, creando un'esperienza unica per famiglie e amici. Dal nostro forno a legna escono pizze fragranti, calzoni ripieni, kebab e tante altre specialit&agrave; preparate con passione e ingredienti di prima qualit&agrave;.</p>
       <div class="features-grid">
         <div class="feature-card">
           <div class="feature-icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 11h.01"/><path d="M11 15h.01"/><path d="M16 16h.01"/><path d="m2 16 20 6-6-20A20 20 0 0 0 2 16"/><path d="M5.71 17.11a17.04 17.04 0 0 1 11.4-11.4"/></svg>
           </div>
-          <h3>Pizza Artigianale</h3>
-          <p>Impasto lievitato 48 ore, cotto nel forno a legna con ingredienti freschi e genuini.</p>
+          <h3 data-i18n="about.feat1.title">Pizza Artigianale</h3>
+          <p data-i18n="about.feat1.desc">Impasto lievitato 48 ore, cotto nel forno a legna con ingredienti freschi e genuini.</p>
         </div>
         <div class="feature-card">
           <div class="feature-icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 11h1a3 3 0 0 1 0 6h-1"/><path d="M9 12v6"/><path d="M13 12v6"/><path d="M14 7.5c-1 0-1.44.5-3 .5s-2-.5-3-.5-1.72.5-2.5.5a2.5 2.5 0 0 1 0-5c.78 0 1.57.5 2.5.5S9.44 2 11 2s2 1 3 1 1.5-.5 2.5-.5a2.5 2.5 0 0 1 0 5c-1 0-1.5-.5-2.5-.5Z"/></svg>
           </div>
-          <h3>Kebab &amp; Calzoni</h3>
-          <p>Kebab artigianale, calzoni ripieni e tante specialit&agrave; per tutti i gusti.</p>
+          <h3 data-i18n="about.feat2.title">Kebab &amp; Calzoni</h3>
+          <p data-i18n="about.feat2.desc">Kebab artigianale, calzoni ripieni e tante specialit&agrave; per tutti i gusti.</p>
         </div>
         <div class="feature-card">
           <div class="feature-icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
           </div>
-          <h3>Per Famiglie &amp; Amici</h3>
-          <p>Un'atmosfera accogliente dove condividere ottimo cibo con le persone care.</p>
+          <h3 data-i18n="about.feat3.title">Per Famiglie &amp; Amici</h3>
+          <p data-i18n="about.feat3.desc">Un'atmosfera accogliente dove condividere ottimo cibo con le persone care.</p>
         </div>
       </div>
     </div>
@@ -139,23 +147,23 @@
   <!-- Menu -->
   <section id="menu" class="section section-muted">
     <div class="container">
-      <span class="eyebrow">Il Nostro Menu</span>
+      <span class="eyebrow" data-i18n="menu.eyebrow">Il Nostro Menu</span>
       <h2>Menu</h2>
       <div class="tabs">
         <div class="tab-list tab-list-scroll">
-          <button class="tab-btn active" data-tab="classiche">Classiche</button>
-          <button class="tab-btn" data-tab="speciali">Speciali</button>
-          <button class="tab-btn" data-tab="pizze">Pizze</button>
-          <button class="tab-btn" data-tab="famiglia">Famiglia</button>
-          <button class="tab-btn" data-tab="focacce">Focacce</button>
-          <button class="tab-btn" data-tab="panini">Panini</button>
-          <button class="tab-btn" data-tab="affettati">Affettati</button>
-          <button class="tab-btn" data-tab="tacos">Tacos</button>
-          <button class="tab-btn" data-tab="calzoni">Calzoni</button>
-          <button class="tab-btn" data-tab="combo">Combo</button>
-          <button class="tab-btn" data-tab="fritture">Fritture</button>
-          <button class="tab-btn" data-tab="dessert">Dessert</button>
-          <button class="tab-btn" data-tab="bibite">Bibite</button>
+          <button class="tab-btn active" data-tab="classiche" data-i18n="menu.tab.classiche">Classiche</button>
+          <button class="tab-btn" data-tab="speciali" data-i18n="menu.tab.speciali">Speciali</button>
+          <button class="tab-btn" data-tab="pizze" data-i18n="menu.tab.pizze">Pizze</button>
+          <button class="tab-btn" data-tab="famiglia" data-i18n="menu.tab.famiglia">Famiglia</button>
+          <button class="tab-btn" data-tab="focacce" data-i18n="menu.tab.focacce">Focacce</button>
+          <button class="tab-btn" data-tab="panini" data-i18n="menu.tab.panini">Panini</button>
+          <button class="tab-btn" data-tab="affettati" data-i18n="menu.tab.affettati">Affettati</button>
+          <button class="tab-btn" data-tab="tacos" data-i18n="menu.tab.tacos">Tacos</button>
+          <button class="tab-btn" data-tab="calzoni" data-i18n="menu.tab.calzoni">Calzoni</button>
+          <button class="tab-btn" data-tab="combo" data-i18n="menu.tab.combo">Combo</button>
+          <button class="tab-btn" data-tab="fritture" data-i18n="menu.tab.fritture">Fritture</button>
+          <button class="tab-btn" data-tab="dessert" data-i18n="menu.tab.dessert">Dessert</button>
+          <button class="tab-btn" data-tab="bibite" data-i18n="menu.tab.bibite">Bibite</button>
         </div>
 
         <!-- Pizze Classiche -->
@@ -163,147 +171,147 @@
           <div class="menu-grid">
             <div class="menu-item">
               <div class="menu-item-header"><h4>Margherita</h4><span class="menu-price">5.00&euro;</span></div>
-              <p>pomodoro, mozzarella</p>
+              <p data-i18n="c.margherita">pomodoro, mozzarella</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>Marinara</h4><span class="menu-price">4.50&euro;</span></div>
-              <p>doppio pomodoro, aglio, olio di oliva, origano</p>
+              <p data-i18n="c.marinara">doppio pomodoro, aglio, olio di oliva, origano</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>Bianca Neve</h4><span class="menu-price">5.00&euro;</span></div>
-              <p>mozzarella, ricotta, grana D.O.P.</p>
+              <p data-i18n="c.biancaneve">mozzarella, ricotta, grana D.O.P.</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>Pugliese</h4><span class="menu-price">5.50&euro;</span></div>
-              <p>pomodoro, mozzarella, cipolle rosse</p>
+              <p data-i18n="c.pugliese">pomodoro, mozzarella, cipolle rosse</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>Bufala</h4><span class="menu-price">6.00&euro;</span></div>
-              <p>pomodoro, mozzarella di bufala campana D.O.P.</p>
+              <p data-i18n="c.bufala">pomodoro, mozzarella di bufala campana D.O.P.</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>Prosciutto</h4><span class="menu-price">6.00&euro;</span></div>
-              <p>pomodoro, mozzarella, prosciutto cotto</p>
+              <p data-i18n="c.prosciutto">pomodoro, mozzarella, prosciutto cotto</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>Napoli</h4><span class="menu-price">6.00&euro;</span></div>
-              <p>pomodoro, mozzarella, acciughe, origano</p>
+              <p data-i18n="c.napoli">pomodoro, mozzarella, acciughe, origano</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>Parmigiana</h4><span class="menu-price">6.00&euro;</span></div>
-              <p>pomodoro, mozzarella, melanzane grigliate, grana D.O.P.</p>
+              <p data-i18n="c.parmigiana">pomodoro, mozzarella, melanzane grigliate, grana D.O.P.</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>Gorgonzola</h4><span class="menu-price">6.00&euro;</span></div>
-              <p>pomodoro, mozzarella, zola D.O.P.</p>
+              <p data-i18n="c.gorgonzola">pomodoro, mozzarella, zola D.O.P.</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>Mare Rosso</h4><span class="menu-price">6.00&euro;</span></div>
-              <p>pomodoro, mozzarella, salmone, panna</p>
+              <p data-i18n="c.marerosso">pomodoro, mozzarella, salmone, panna</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>Pota</h4><span class="menu-price">6.00&euro;</span></div>
-              <p>pomodoro, mozzarella, prosciutto cotto, patatine fritte</p>
+              <p data-i18n="c.pota">pomodoro, mozzarella, prosciutto cotto, patatine fritte</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>Romana</h4><span class="menu-price">6.00&euro;</span></div>
-              <p>pomodoro, mozzarella, acciughe, origano, capperi, oliva nera</p>
+              <p data-i18n="c.romana">pomodoro, mozzarella, acciughe, origano, capperi, oliva nera</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>Siciliana</h4><span class="menu-price">6.00&euro;</span></div>
-              <p>pomodoro, mozzarella, acciughe, capperi, origano</p>
+              <p data-i18n="c.siciliana">pomodoro, mozzarella, acciughe, capperi, origano</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>Salamino Piccante</h4><span class="menu-price">6.00&euro;</span></div>
-              <p>pomodoro, mozzarella, salamino piccante</p>
+              <p data-i18n="c.salamino">pomodoro, mozzarella, salamino piccante</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>Speck</h4><span class="menu-price">6.00&euro;</span></div>
-              <p>pomodoro, mozzarella, speck I.G.P.</p>
+              <p data-i18n="c.speck">pomodoro, mozzarella, speck I.G.P.</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>Salsiccia</h4><span class="menu-price">6.00&euro;</span></div>
-              <p>pomodoro, mozzarella, salsiccia fresca</p>
+              <p data-i18n="c.salsiccia">pomodoro, mozzarella, salsiccia fresca</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>Salame Dolce</h4><span class="menu-price">6.00&euro;</span></div>
-              <p>pomodoro, mozzarella, salame dolce</p>
+              <p data-i18n="c.salamedolce">pomodoro, mozzarella, salame dolce</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>Tonno</h4><span class="menu-price">6.00&euro;</span></div>
-              <p>pomodoro, mozzarella, tonno</p>
+              <p data-i18n="c.tonno">pomodoro, mozzarella, tonno</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>Wurstel</h4><span class="menu-price">6.00&euro;</span></div>
-              <p>pomodoro, mozzarella, wurstel</p>
+              <p data-i18n="c.wurstel">pomodoro, mozzarella, wurstel</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>Bismarck</h4><span class="menu-price">6.50&euro;</span></div>
-              <p>pomodoro, mozzarella, asparagi, uovo, grana D.O.P.</p>
+              <p data-i18n="c.bismarck">pomodoro, mozzarella, asparagi, uovo, grana D.O.P.</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>Crudo</h4><span class="menu-price">6.50&euro;</span></div>
-              <p>pomodoro, mozzarella, crudo di Parma 18 mesi</p>
+              <p data-i18n="c.crudo">pomodoro, mozzarella, crudo di Parma 18 mesi</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>Italiana</h4><span class="menu-price">6.50&euro;</span></div>
-              <p>pomodoro, mozzarella, pomodorini freschi, basilico</p>
+              <p data-i18n="c.italiana">pomodoro, mozzarella, pomodorini freschi, basilico</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>Prosciutto e Funghi</h4><span class="menu-price">6.50&euro;</span></div>
-              <p>pomodoro, mozzarella, prosciutto cotto, funghi champignon</p>
+              <p data-i18n="c.prosciuttofunghi">pomodoro, mozzarella, prosciutto cotto, funghi champignon</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>Tonno e Cipolle</h4><span class="menu-price">6.50&euro;</span></div>
-              <p>pomodoro, mozzarella, tonno, cipolle rosse</p>
+              <p data-i18n="c.tonnocipolle">pomodoro, mozzarella, tonno, cipolle rosse</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>Americana</h4><span class="menu-price">7.00&euro;</span></div>
-              <p>pomodoro, mozzarella, wurstel, patatine fritte</p>
+              <p data-i18n="c.americana">pomodoro, mozzarella, wurstel, patatine fritte</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>Capricciosa</h4><span class="menu-price">7.00&euro;</span></div>
-              <p>pomodoro, mozzarella, prosciutto cotto, funghi champignon, carciofi, olive</p>
+              <p data-i18n="c.capricciosa">pomodoro, mozzarella, prosciutto cotto, funghi champignon, carciofi, olive</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>Caprese</h4><span class="menu-price">7.00&euro;</span></div>
-              <p>pomodoro, mozzarella di bufala campana D.O.P., pomodorini freschi, basilico</p>
+              <p data-i18n="c.caprese">pomodoro, mozzarella di bufala campana D.O.P., pomodorini freschi, basilico</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>Diavola</h4><span class="menu-price">7.00&euro;</span></div>
-              <p>pomodoro, mozzarella, salamino piccante, peperoni, olive</p>
+              <p data-i18n="c.diavola">pomodoro, mozzarella, salamino piccante, peperoni, olive</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>Porcini</h4><span class="menu-price">7.00&euro;</span></div>
-              <p>pomodoro, mozzarella, funghi porcini</p>
+              <p data-i18n="c.porcini">pomodoro, mozzarella, funghi porcini</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>Quattro Formaggi</h4><span class="menu-price">7.00&euro;</span></div>
-              <p>pomodoro, mozzarella, emmental, fontina, zola D.O.P., grana D.O.P.</p>
+              <p data-i18n="c.4formaggi">pomodoro, mozzarella, emmental, fontina, zola D.O.P., grana D.O.P.</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>Ricotta e Spinaci</h4><span class="menu-price">7.00&euro;</span></div>
-              <p>pomodoro, mozzarella, ricotta, spinaci, grana D.O.P.</p>
+              <p data-i18n="c.ricottaspinaci">pomodoro, mozzarella, ricotta, spinaci, grana D.O.P.</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>Verdure Grigliate</h4><span class="menu-price">7.00&euro;</span></div>
-              <p>pomodoro, mozzarella, zucchine, melanzane, peperoni</p>
+              <p data-i18n="c.verdure">pomodoro, mozzarella, zucchine, melanzane, peperoni</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>Gamberetti e Rucola</h4><span class="menu-price">7.50&euro;</span></div>
-              <p>pomodoro, mozzarella, gamberetti, rucola</p>
+              <p data-i18n="c.gamberetti">pomodoro, mozzarella, gamberetti, rucola</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>Quattro Stagioni</h4><span class="menu-price">7.50&euro;</span></div>
-              <p>pomodoro, mozzarella, prosciutto cotto, funghi champignon, carciofi, olive, origano, acciughe</p>
+              <p data-i18n="c.4stagioni">pomodoro, mozzarella, prosciutto cotto, funghi champignon, carciofi, olive, origano, acciughe</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>Frutti di Mare</h4><span class="menu-price">8.00&euro;</span></div>
-              <p>pomodoro, mozzarella, frutti di mare, prezzemolo, olio extravergine, aglio</p>
+              <p data-i18n="c.fruttidimare">pomodoro, mozzarella, frutti di mare, prezzemolo, olio extravergine, aglio</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>Mare e Monti</h4><span class="menu-price">8.00&euro;</span></div>
-              <p>pomodoro, mozzarella, porcini, frutti di mare</p>
+              <p data-i18n="c.maremonti">pomodoro, mozzarella, porcini, frutti di mare</p>
             </div>
           </div>
         </div>
@@ -313,51 +321,51 @@
           <div class="menu-grid">
             <div class="menu-item">
               <div class="menu-item-header"><h4>Bing</h4><span class="menu-price">6.00&euro;</span></div>
-              <p>pomodoro, mozzarella, patatine fritte, ketchup</p>
+              <p data-i18n="s.bing">pomodoro, mozzarella, patatine fritte, ketchup</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>Abate</h4><span class="menu-price">6.50&euro;</span></div>
-              <p>pomodoro, mozzarella, salsiccia fresca, patatine fritte</p>
+              <p data-i18n="s.abate">pomodoro, mozzarella, salsiccia fresca, patatine fritte</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>Bergamasca</h4><span class="menu-price">7.00&euro;</span></div>
-              <p>pomodoro, mozzarella, zola D.O.P., pancetta</p>
+              <p data-i18n="s.bergamasca">pomodoro, mozzarella, zola D.O.P., pancetta</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>Brie e Speck</h4><span class="menu-price">7.00&euro;</span></div>
-              <p>pomodoro, mozzarella, speck I.G.P., brie</p>
+              <p data-i18n="s.briespeck">pomodoro, mozzarella, speck I.G.P., brie</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>Cime di Rapa</h4><span class="menu-price">7.00&euro;</span></div>
-              <p>pomodoro, mozzarella, friarielli, salsiccia fresca</p>
+              <p data-i18n="s.cimedirapa">pomodoro, mozzarella, friarielli, salsiccia fresca</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>Fantasia</h4><span class="menu-price">7.50&euro;</span></div>
-              <p>pomodoro, mozzarella, brie, speck I.G.P., porcini, grana</p>
+              <p data-i18n="s.fantasia">pomodoro, mozzarella, brie, speck I.G.P., porcini, grana</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>Liguria</h4><span class="menu-price">7.50&euro;</span></div>
-              <p>mozzarella, pesto, burrata D.O.P., pomodorini freschi</p>
+              <p data-i18n="s.liguria">mozzarella, pesto, burrata D.O.P., pomodorini freschi</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>Lucana</h4><span class="menu-price">7.50&euro;</span></div>
-              <p>pomodoro, mozzarella, pancetta, porcini, taleggio, grana D.O.P.</p>
+              <p data-i18n="s.lucana">pomodoro, mozzarella, pancetta, porcini, taleggio, grana D.O.P.</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>Amatriciana</h4><span class="menu-price">8.00&euro;</span></div>
-              <p>pomodoro, mozzarella, pancetta, uovo, panna</p>
+              <p data-i18n="s.amatriciana">pomodoro, mozzarella, pancetta, uovo, panna</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>Atalanta</h4><span class="menu-price">8.00&euro;</span></div>
-              <p>pomodoro, mozzarella, carciofi, burrata D.O.P., crudo di Parma 18 mesi, grana D.O.P.</p>
+              <p data-i18n="s.atalanta">pomodoro, mozzarella, carciofi, burrata D.O.P., crudo di Parma 18 mesi, grana D.O.P.</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>Cavallo</h4><span class="menu-price">8.00&euro;</span></div>
-              <p>pomodoro, mozzarella, porcini, bresaola I.G.P., rucola, grana D.O.P.</p>
+              <p data-i18n="s.cavallo">pomodoro, mozzarella, porcini, bresaola I.G.P., rucola, grana D.O.P.</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>Delicata</h4><span class="menu-price">8.00&euro;</span></div>
-              <p>pomodoro, mozzarella, crudo di Parma 18 mesi, bufala D.O.P., grana, porcini</p>
+              <p data-i18n="s.delicata">pomodoro, mozzarella, crudo di Parma 18 mesi, bufala D.O.P., grana, porcini</p>
             </div>
           </div>
         </div>
@@ -367,83 +375,83 @@
           <div class="menu-grid">
             <div class="menu-item">
               <div class="menu-item-header"><h4>Marconi</h4><span class="menu-price">7.00&euro;</span></div>
-              <p>pomodoro, mozzarella, prosciutto, brie, porcini</p>
+              <p data-i18n="p.marconi">pomodoro, mozzarella, prosciutto, brie, porcini</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>Paesana</h4><span class="menu-price">7.00&euro;</span></div>
-              <p>pomodoro, mozzarella, salsiccia fresca, pancetta</p>
+              <p data-i18n="p.paesana">pomodoro, mozzarella, salsiccia fresca, pancetta</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>Polenta</h4><span class="menu-price">7.00&euro;</span></div>
-              <p>pomodoro, mozzarella, polenta bergamasca, salsiccia fresca, taleggio</p>
+              <p data-i18n="p.polenta">pomodoro, mozzarella, polenta bergamasca, salsiccia fresca, taleggio</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>P+S+W</h4><span class="menu-price">7.00&euro;</span></div>
-              <p>pomodoro, mozzarella, prosciutto, wurstel, salame piccante</p>
+              <p data-i18n="p.psw">pomodoro, mozzarella, prosciutto, wurstel, salame piccante</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>Spicy</h4><span class="menu-price">7.00&euro;</span></div>
-              <p>pomodoro, mozzarella, salame piccante, zola D.O.P., cipolle rosse</p>
+              <p data-i18n="p.spicy">pomodoro, mozzarella, salame piccante, zola D.O.P., cipolle rosse</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>Stella</h4><span class="menu-price">7.00&euro;</span></div>
-              <p>pomodoro, mozzarella, salame dolce, cipolle rosse, peperoni</p>
+              <p data-i18n="p.stella">pomodoro, mozzarella, salame dolce, cipolle rosse, peperoni</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>Tirolese</h4><span class="menu-price">7.00&euro;</span></div>
-              <p>pomodoro, mozzarella, salsiccia fresca, funghi champignon, cipolle rosse</p>
+              <p data-i18n="p.tirolese">pomodoro, mozzarella, salsiccia fresca, funghi champignon, cipolle rosse</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>Trevisana</h4><span class="menu-price">7.00&euro;</span></div>
-              <p>pomodoro, mozzarella, trevisana, zola D.O.P.</p>
+              <p data-i18n="p.trevisana">pomodoro, mozzarella, trevisana, zola D.O.P.</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>Zanica</h4><span class="menu-price">7.00&euro;</span></div>
-              <p>pomodoro, mozzarella, prosciutto cotto, funghi, salame piccante, carciofi, olive</p>
+              <p data-i18n="p.zanica">pomodoro, mozzarella, prosciutto cotto, funghi, salame piccante, carciofi, olive</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>Zola e Pere o Mele</h4><span class="menu-price">7.00&euro;</span></div>
-              <p>mozzarella, zola D.O.P., noci, pere o mele</p>
+              <p data-i18n="p.zolapere">mozzarella, zola D.O.P., noci, pere o mele</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>Nilo</h4><span class="menu-price">7.50&euro;</span></div>
-              <p>pomodoro, mozzarella, crudo di Parma 18 mesi, scamorza, rucola, grana D.O.P.</p>
+              <p data-i18n="p.nilo">pomodoro, mozzarella, crudo di Parma 18 mesi, scamorza, rucola, grana D.O.P.</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>Primavera</h4><span class="menu-price">7.50&euro;</span></div>
-              <p>pomodoro, mozzarella, speck, grana D.O.P., rucola, pomodorini freschi</p>
+              <p data-i18n="p.primavera">pomodoro, mozzarella, speck, grana D.O.P., rucola, pomodorini freschi</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>Quattro Salumi</h4><span class="menu-price">7.50&euro;</span></div>
-              <p>pomodoro, mozzarella, prosciutto, pancetta arrotolata, wurstel, salame piccante</p>
+              <p data-i18n="p.4salumi">pomodoro, mozzarella, prosciutto, pancetta arrotolata, wurstel, salame piccante</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>Shawerma</h4><span class="menu-price">7.50&euro;</span></div>
-              <p>pomodoro, mozzarella, kebab, peperoni, salame piccante, salsa piccante</p>
+              <p data-i18n="p.shawerma">pomodoro, mozzarella, kebab, peperoni, salame piccante, salsa piccante</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>Violetta</h4><span class="menu-price">7.50&euro;</span></div>
-              <p>pomodoro, mozzarella, trevisana, salame piccante, zola D.O.P., cipolle rosse</p>
+              <p data-i18n="p.violetta">pomodoro, mozzarella, trevisana, salame piccante, zola D.O.P., cipolle rosse</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>Masha</h4><span class="menu-price">8.00&euro;</span></div>
-              <p>mozzarella, gamberetti, zucchine, salmone, rucola</p>
+              <p data-i18n="p.masha">mozzarella, gamberetti, zucchine, salmone, rucola</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>Mortadella</h4><span class="menu-price">8.00&euro;</span></div>
-              <p>mozzarella, mortadella, burrata D.O.P., pesto di pistacchio, grana</p>
+              <p data-i18n="p.mortadella">mozzarella, mortadella, burrata D.O.P., pesto di pistacchio, grana</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>Pizza Kebab</h4><span class="menu-price">8.00&euro;</span></div>
-              <p>pomodoro, mozzarella, kebab, cipolle rosse, insalata, patatine fritte, salsa piccante, salsa yogurt</p>
+              <p data-i18n="p.pizzakebab">pomodoro, mozzarella, kebab, cipolle rosse, insalata, patatine fritte, salsa piccante, salsa yogurt</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>Saporita</h4><span class="menu-price">8.00&euro;</span></div>
-              <p>mozzarella, crudo di Parma 18 mesi, ricotta, spinaci, grana</p>
+              <p data-i18n="p.saporita">mozzarella, crudo di Parma 18 mesi, ricotta, spinaci, grana</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>Valtellina</h4><span class="menu-price">8.00&euro;</span></div>
-              <p>pomodoro, mozzarella, bresaola I.G.P., rucola, grana</p>
+              <p data-i18n="p.valtellina">pomodoro, mozzarella, bresaola I.G.P., rucola, grana</p>
             </div>
           </div>
         </div>
@@ -471,15 +479,15 @@
           <div class="menu-grid">
             <div class="menu-item">
               <div class="menu-item-header"><h4>Focaccia Liscia</h4><span class="menu-price">4.00&euro;</span></div>
-              <p>olio d&rsquo;oliva, sale, origano</p>
+              <p data-i18n="foc.liscia">olio d&rsquo;oliva, sale, origano</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>Focaccia Primavera</h4><span class="menu-price">5.00&euro;</span></div>
-              <p>bufala D.O.P., pomodori freschi, rucola, grana (aggiunta a fine cottura)</p>
+              <p data-i18n="foc.primavera">bufala D.O.P., pomodori freschi, rucola, grana (aggiunta a fine cottura)</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>Focaccia Salumi</h4><span class="menu-price">5.00&euro;</span></div>
-              <p>focaccia liscia, salume a scelta, rucola, grana (aggiunta a fine cottura)</p>
+              <p data-i18n="foc.salumi">focaccia liscia, salume a scelta, rucola, grana (aggiunta a fine cottura)</p>
             </div>
           </div>
         </div>
@@ -489,43 +497,43 @@
           <div class="menu-grid">
             <div class="menu-item">
               <div class="menu-item-header"><h4>Panino Hotdog</h4><span class="menu-price">3.50&euro;</span></div>
-              <p>hotdog, ketchup, maionese</p>
+              <p data-i18n="pan.hotdog">hotdog, ketchup, maionese</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>Panino Falafel</h4><span class="menu-price">4.50&euro;</span></div>
-              <p>pane della pizza, falafel, insalata, pomodoro, cipolle, salsa rosa</p>
+              <p data-i18n="pan.falafel">pane della pizza, falafel, insalata, pomodoro, cipolle, salsa rosa</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>Panino Kebab</h4><span class="menu-price">5.00&euro;</span></div>
-              <p>pane della pizza, carne di pollo/tacchino, insalata, patatine, pomodoro, cipolle, salsa piccante, salsa rosa, salsa yogurt</p>
+              <p data-i18n="pan.kebab">pane della pizza, carne di pollo/tacchino, insalata, patatine, pomodoro, cipolle, salsa piccante, salsa rosa, salsa yogurt</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>Panino Hamburger</h4><span class="menu-price">5.00&euro;</span></div>
-              <p>formaggio, pomodoro, insalata, ketchup, maionese</p>
+              <p data-i18n="pan.hamburger">formaggio, pomodoro, insalata, ketchup, maionese</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>Kebab Box</h4><span class="menu-price">5.00&euro;</span></div>
-              <p>carne di pollo/tacchino, patatine, salsa</p>
+              <p data-i18n="pan.kebabbox">carne di pollo/tacchino, patatine, salsa</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>Piadina Falafel</h4><span class="menu-price">5.00&euro;</span></div>
-              <p>piadina, falafel, insalata, pomodoro, cipolle, salsa rosa</p>
+              <p data-i18n="pan.piadfalafel">piadina, falafel, insalata, pomodoro, cipolle, salsa rosa</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>Piadina Kebab</h4><span class="menu-price">6.00&euro;</span></div>
-              <p>piadina, carne di pollo/tacchino, insalata, patatine, pomodoro, cipolle, salsa piccante, salsa rosa, salsa yogurt</p>
+              <p data-i18n="pan.piadkebab">piadina, carne di pollo/tacchino, insalata, patatine, pomodoro, cipolle, salsa piccante, salsa rosa, salsa yogurt</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>Panino Kebab Maxi</h4><span class="menu-price">6.50&euro;</span></div>
-              <p>pane della pizza, carne di pollo/tacchino, insalata, patatine, pomodoro, cipolle, salsa piccante, salsa rosa, salsa yogurt</p>
+              <p data-i18n="pan.kebabmaxi">pane della pizza, carne di pollo/tacchino, insalata, patatine, pomodoro, cipolle, salsa piccante, salsa rosa, salsa yogurt</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>Piatto Kebab</h4><span class="menu-price">7.00&euro;</span></div>
-              <p>carne di pollo/tacchino, insalata, patatine, pomodoro, cipolle, salsa piccante, salsa rosa, salsa yogurt</p>
+              <p data-i18n="pan.piattokebab">carne di pollo/tacchino, insalata, patatine, pomodoro, cipolle, salsa piccante, salsa rosa, salsa yogurt</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>Piatto Kebab + Riso</h4><span class="menu-price">8.00&euro;</span></div>
-              <p>carne di pollo/tacchino, insalata, patatine, salsa, riso</p>
+              <p data-i18n="pan.piattoriso">carne di pollo/tacchino, insalata, patatine, salsa, riso</p>
             </div>
           </div>
         </div>
@@ -535,15 +543,15 @@
           <div class="menu-grid">
             <div class="menu-item">
               <div class="menu-item-header"><h4>Bresaola e Rucola</h4><span class="menu-price">5.00&euro;</span></div>
-              <p>pomodorini freschi, mozzarella, bresaola, rucola, grana</p>
+              <p data-i18n="aff.bresaola">pomodorini freschi, mozzarella, bresaola, rucola, grana</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>Cotto e Maionese</h4><span class="menu-price">5.00&euro;</span></div>
-              <p>prosciutto cotto, mozzarella, maionese</p>
+              <p data-i18n="aff.cotto">prosciutto cotto, mozzarella, maionese</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>Crudo e Bufala</h4><span class="menu-price">5.00&euro;</span></div>
-              <p>mozzarella di bufala, crudo, rucola, maionese</p>
+              <p data-i18n="aff.crudo">mozzarella di bufala, crudo, rucola, maionese</p>
             </div>
           </div>
         </div>
@@ -553,11 +561,11 @@
           <div class="menu-grid">
             <div class="menu-item">
               <div class="menu-item-header"><h4>Tacos Pollo</h4><span class="menu-price">5.00&euro;</span></div>
-              <p>pollo, patatine, salsa algerina, maionese, biggy</p>
+              <p data-i18n="tac.pollo">pollo, patatine, salsa algerina, maionese, biggy</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>Tacos Kebab</h4><span class="menu-price">6.00&euro;</span></div>
-              <p>kebab, patatine, salsa algerina, maionese, biggy</p>
+              <p data-i18n="tac.kebab">kebab, patatine, salsa algerina, maionese, biggy</p>
             </div>
           </div>
         </div>
@@ -567,27 +575,27 @@
           <div class="menu-grid">
             <div class="menu-item">
               <div class="menu-item-header"><h4>Calzone Liscio</h4><span class="menu-price">6.00&euro;</span></div>
-              <p>pomodoro, mozzarella, prosciutto cotto</p>
+              <p data-i18n="cal.liscio">pomodoro, mozzarella, prosciutto cotto</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>Calzone Farcito</h4><span class="menu-price">6.50&euro;</span></div>
-              <p>pomodoro, mozzarella, prosciutto cotto, funghi, carciofi</p>
+              <p data-i18n="cal.farcito">pomodoro, mozzarella, prosciutto cotto, funghi, carciofi</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>Calzone Dell Amore</h4><span class="menu-price">7.00&euro;</span></div>
-              <p>pomodoro, mozzarella, ricotta, spinaci, prosciutto cotto</p>
+              <p data-i18n="cal.amore">pomodoro, mozzarella, ricotta, spinaci, prosciutto cotto</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>Calzone Gustoso</h4><span class="menu-price">8.00&euro;</span></div>
-              <p>pomodoro, mozzarella, prosciutto cotto, salamino piccante, scamorza, porcini</p>
+              <p data-i18n="cal.gustoso">pomodoro, mozzarella, prosciutto cotto, salamino piccante, scamorza, porcini</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>Calzone Kebab</h4><span class="menu-price">8.00&euro;</span></div>
-              <p>pomodoro, mozzarella, kebab, patatine, cipolle, insalata, salsa rosa</p>
+              <p data-i18n="cal.kebab">pomodoro, mozzarella, kebab, patatine, cipolle, insalata, salsa rosa</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>Calzone Coco</h4><span class="menu-price">8.00&euro;</span></div>
-              <p>pomodoro, mozzarella, kebab, porcini, scamorza, salame piccante</p>
+              <p data-i18n="cal.coco">pomodoro, mozzarella, kebab, porcini, scamorza, salame piccante</p>
             </div>
           </div>
         </div>
@@ -597,76 +605,76 @@
           <div class="menu-grid">
             <div class="menu-item">
               <div class="menu-item-header"><h4>Menu Falafel</h4><span class="menu-price">6.00&euro;</span></div>
-              <p>panino falafel + patatine fritte + bibita</p>
+              <p data-i18n="com.falafel">panino falafel + patatine fritte + bibita</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>Menu Hotdog</h4><span class="menu-price">6.00&euro;</span></div>
-              <p>panino hot dog + patatine fritte + bibita</p>
+              <p data-i18n="com.hotdog">panino hot dog + patatine fritte + bibita</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>Menu Piadine Falafel</h4><span class="menu-price">6.50&euro;</span></div>
-              <p>piadina falafel + patatine fritte + bibita</p>
+              <p data-i18n="com.piadfalafel">piadina falafel + patatine fritte + bibita</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>Menu Kebab</h4><span class="menu-price">7.00&euro;</span></div>
-              <p>kebab + patatine fritte + bibita</p>
+              <p data-i18n="com.kebab">kebab + patatine fritte + bibita</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>Menu Hamburger</h4><span class="menu-price">7.00&euro;</span></div>
-              <p>panino hamburger + patatine fritte + bibita</p>
+              <p data-i18n="com.hamburger">panino hamburger + patatine fritte + bibita</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>Menu Piadina</h4><span class="menu-price">7.50&euro;</span></div>
-              <p>piadina kebab + patatine fritte + bibita</p>
+              <p data-i18n="com.piadina">piadina kebab + patatine fritte + bibita</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>Menu Tacos Piadina</h4><span class="menu-price">7.50&euro;</span></div>
-              <p>tacos piadina + patatine fritte + bibita</p>
+              <p data-i18n="com.tacos">tacos piadina + patatine fritte + bibita</p>
             </div>
           </div>
-          <p class="menu-note">Ogni aggiunta &mdash; +1.00&euro; | Impasto integrale / kamut / senza glutine &mdash; +1.00&euro;</p>
+          <p class="menu-note" data-i18n="menu.note">Ogni aggiunta &mdash; +1.00&euro; | Impasto integrale / kamut / senza glutine &mdash; +1.00&euro;</p>
         </div>
 
         <!-- Fritture -->
         <div class="tab-content" id="tab-fritture">
           <div class="menu-grid">
             <div class="menu-item">
-              <div class="menu-item-header"><h4>Patatine fritte</h4><span class="menu-price">3.00&euro;</span></div>
+              <div class="menu-item-header"><h4 data-i18n="fri.patatine">Patatine fritte</h4><span class="menu-price">3.00&euro;</span></div>
             </div>
             <div class="menu-item">
-              <div class="menu-item-header"><h4>Crocchette di patate</h4><span class="menu-price">4.00&euro;</span></div>
-              <p>10 pezzi</p>
+              <div class="menu-item-header"><h4 data-i18n="fri.crocchette">Crocchette di patate</h4><span class="menu-price">4.00&euro;</span></div>
+              <p data-i18n="fri.crocchette.d">10 pezzi</p>
             </div>
             <div class="menu-item">
-              <div class="menu-item-header"><h4>Olive ascolane</h4><span class="menu-price">4.50&euro;</span></div>
-              <p>10 pezzi</p>
+              <div class="menu-item-header"><h4 data-i18n="fri.olive">Olive ascolane</h4><span class="menu-price">4.50&euro;</span></div>
+              <p data-i18n="fri.olive.d">10 pezzi</p>
             </div>
             <div class="menu-item">
-              <div class="menu-item-header"><h4>Mozzarelline</h4><span class="menu-price">4.50&euro;</span></div>
-              <p>10 pezzi</p>
+              <div class="menu-item-header"><h4 data-i18n="fri.mozzarelline">Mozzarelline</h4><span class="menu-price">4.50&euro;</span></div>
+              <p data-i18n="fri.mozzarelline.d">10 pezzi</p>
             </div>
             <div class="menu-item">
-              <div class="menu-item-header"><h4>Speedy pollo</h4><span class="menu-price">4.50&euro;</span></div>
-              <p>10 pezzi</p>
+              <div class="menu-item-header"><h4 data-i18n="fri.speedy">Speedy pollo</h4><span class="menu-price">4.50&euro;</span></div>
+              <p data-i18n="fri.speedy.d">10 pezzi</p>
             </div>
             <div class="menu-item">
-              <div class="menu-item-header"><h4>Chele di granchio</h4><span class="menu-price">4.50&euro;</span></div>
-              <p>6 pezzi</p>
+              <div class="menu-item-header"><h4 data-i18n="fri.chele">Chele di granchio</h4><span class="menu-price">4.50&euro;</span></div>
+              <p data-i18n="fri.chele.d">6 pezzi</p>
             </div>
             <div class="menu-item">
-              <div class="menu-item-header"><h4>Anelli di cipolla</h4><span class="menu-price">4.50&euro;</span></div>
-              <p>10 pezzi</p>
+              <div class="menu-item-header"><h4 data-i18n="fri.anelli">Anelli di cipolla</h4><span class="menu-price">4.50&euro;</span></div>
+              <p data-i18n="fri.anelli.d">10 pezzi</p>
             </div>
             <div class="menu-item">
-              <div class="menu-item-header"><h4>Chicken nuggets</h4><span class="menu-price">5.00&euro;</span></div>
-              <p>10 pezzi</p>
+              <div class="menu-item-header"><h4 data-i18n="fri.nuggets">Chicken nuggets</h4><span class="menu-price">5.00&euro;</span></div>
+              <p data-i18n="fri.nuggets.d">10 pezzi</p>
             </div>
             <div class="menu-item">
-              <div class="menu-item-header"><h4>Rosticelle Mexico</h4><span class="menu-price">5.00&euro;</span></div>
-              <p>6 pezzi</p>
+              <div class="menu-item-header"><h4 data-i18n="fri.rosticelle">Rosticelle Mexico</h4><span class="menu-price">5.00&euro;</span></div>
+              <p data-i18n="fri.rosticelle.d">6 pezzi</p>
             </div>
             <div class="menu-item">
-              <div class="menu-item-header"><h4>Calamari fritti</h4><span class="menu-price">8.00&euro;</span></div>
+              <div class="menu-item-header"><h4 data-i18n="fri.calamari">Calamari fritti</h4><span class="menu-price">8.00&euro;</span></div>
             </div>
           </div>
         </div>
@@ -676,7 +684,7 @@
           <div class="menu-grid">
             <div class="menu-item">
               <div class="menu-item-header"><h4>Baklava</h4><span class="menu-price">4.00&euro;</span></div>
-              <p>4 pezzi</p>
+              <p data-i18n="des.baklava.d">4 pezzi</p>
             </div>
             <div class="menu-item">
               <div class="menu-item-header"><h4>Piadina alla Nutella</h4><span class="menu-price">4.00&euro;</span></div>
@@ -691,13 +699,13 @@
         <div class="tab-content" id="tab-bibite">
           <div class="menu-grid">
             <div class="menu-item">
-              <div class="menu-item-header"><h4>Acqua 0.5 lt</h4><span class="menu-price">1.00&euro;</span></div>
+              <div class="menu-item-header"><h4 data-i18n="bib.acqua">Acqua 0.5 lt</h4><span class="menu-price">1.00&euro;</span></div>
             </div>
             <div class="menu-item">
-              <div class="menu-item-header"><h4>Lattina bibita 33 cl</h4><span class="menu-price">1.50&euro;</span></div>
+              <div class="menu-item-header"><h4 data-i18n="bib.lattina">Lattina bibita 33 cl</h4><span class="menu-price">1.50&euro;</span></div>
             </div>
             <div class="menu-item">
-              <div class="menu-item-header"><h4>Bottiglia bibita 1.5 lt</h4><span class="menu-price">3.00&euro;</span></div>
+              <div class="menu-item-header"><h4 data-i18n="bib.bottiglia">Bottiglia bibita 1.5 lt</h4><span class="menu-price">3.00&euro;</span></div>
             </div>
           </div>
         </div>
@@ -710,36 +718,36 @@
   <!-- Servizi -->
   <section class="section">
     <div class="container">
-      <span class="eyebrow">Cosa Offriamo</span>
-      <h2>I Nostri Servizi</h2>
+      <span class="eyebrow" data-i18n="srv.eyebrow">Cosa Offriamo</span>
+      <h2 data-i18n="srv.title">I Nostri Servizi</h2>
       <div class="services-grid">
         <div class="service-card">
           <div class="service-icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 2-2.3 2.3a3 3 0 0 0 0 4.2l1.8 1.8a3 3 0 0 0 4.2 0L22 8"/><path d="M15 15 3.3 3.3a4.2 4.2 0 0 0 0 6l7.4 7.4a4.2 4.2 0 0 0 6 0L15 15Zm0 0 7 7"/><path d="m2.1 21.8 6.4-6.3"/><path d="m19 5-7 7"/></svg>
           </div>
-          <h3>Al Tavolo</h3>
-          <p>Goditi i nostri piatti in un'atmosfera accogliente e familiare.</p>
+          <h3 data-i18n="srv.tavolo">Al Tavolo</h3>
+          <p data-i18n="srv.tavolo.d">Goditi i nostri piatti in un'atmosfera accogliente e familiare.</p>
         </div>
         <div class="service-card">
           <div class="service-icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
           </div>
-          <h3>Asporto</h3>
-          <p>Ordina e ritira &mdash; la tua pizza calda pronta in pochi minuti.</p>
+          <h3 data-i18n="srv.asporto">Asporto</h3>
+          <p data-i18n="srv.asporto.d">Ordina e ritira &mdash; la tua pizza calda pronta in pochi minuti.</p>
         </div>
         <div class="service-card">
           <div class="service-icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></svg>
           </div>
-          <h3>Consegna</h3>
-          <p>Consegna a domicilio nella zona di Zanica e dintorni.</p>
+          <h3 data-i18n="srv.consegna">Consegna</h3>
+          <p data-i18n="srv.consegna.d">Consegna a domicilio nella zona di Zanica e dintorni.</p>
         </div>
         <div class="service-card">
           <div class="service-icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 14v7"/><path d="M7 14v7"/><path d="M12 2v22"/><path d="M17 4H7l5 10 5-10Z"/></svg>
           </div>
-          <h3>All'Aperto</h3>
-          <p>Posti all'aperto per goderti il pasto nella bella stagione.</p>
+          <h3 data-i18n="srv.aperto">All'Aperto</h3>
+          <p data-i18n="srv.aperto.d">Posti all'aperto per goderti il pasto nella bella stagione.</p>
         </div>
       </div>
     </div>
@@ -748,21 +756,21 @@
   <!-- Orari -->
   <section id="orari" class="section section-muted">
     <div class="container">
-      <span class="eyebrow">Quando Trovarci</span>
-      <h2>Orari di Apertura</h2>
+      <span class="eyebrow" data-i18n="orari.eyebrow">Quando Trovarci</span>
+      <h2 data-i18n="orari.title">Orari di Apertura</h2>
       <div class="orari-card">
         <div class="orari-header">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          <span>Orari Settimanali</span>
+          <span data-i18n="orari.weekly">Orari Settimanali</span>
         </div>
         <div class="orari-list">
-          <div class="orari-row"><span>Luned&igrave;</span><span>11:00 &ndash; 15:00 / 17:30 &ndash; 00:00</span></div>
-          <div class="orari-row"><span>Marted&igrave;</span><span>11:00 &ndash; 15:00 / 17:30 &ndash; 00:00</span></div>
-          <div class="orari-row"><span>Mercoled&igrave;</span><span>11:00 &ndash; 15:00 / 17:30 &ndash; 00:00</span></div>
-          <div class="orari-row"><span>Gioved&igrave;</span><span>11:00 &ndash; 15:00 / 17:30 &ndash; 00:00</span></div>
-          <div class="orari-row"><span>Venerd&igrave;</span><span>11:00 &ndash; 15:00 / 17:30 &ndash; 00:00</span></div>
-          <div class="orari-row"><span>Sabato</span><span>11:00 &ndash; 15:00 / 17:30 &ndash; 00:00</span></div>
-          <div class="orari-row"><span>Domenica</span><span>11:00 &ndash; 15:00 / 17:30 &ndash; 00:00</span></div>
+          <div class="orari-row"><span data-i18n="orari.lun">Luned&igrave;</span><span>11:00 &ndash; 15:00 / 17:30 &ndash; 00:00</span></div>
+          <div class="orari-row"><span data-i18n="orari.mar">Marted&igrave;</span><span>11:00 &ndash; 15:00 / 17:30 &ndash; 00:00</span></div>
+          <div class="orari-row"><span data-i18n="orari.mer">Mercoled&igrave;</span><span>11:00 &ndash; 15:00 / 17:30 &ndash; 00:00</span></div>
+          <div class="orari-row"><span data-i18n="orari.gio">Gioved&igrave;</span><span>11:00 &ndash; 15:00 / 17:30 &ndash; 00:00</span></div>
+          <div class="orari-row"><span data-i18n="orari.ven">Venerd&igrave;</span><span>11:00 &ndash; 15:00 / 17:30 &ndash; 00:00</span></div>
+          <div class="orari-row"><span data-i18n="orari.sab">Sabato</span><span>11:00 &ndash; 15:00 / 17:30 &ndash; 00:00</span></div>
+          <div class="orari-row"><span data-i18n="orari.dom">Domenica</span><span>11:00 &ndash; 15:00 / 17:30 &ndash; 00:00</span></div>
         </div>
       </div>
     </div>
@@ -771,25 +779,25 @@
   <!-- Contatti -->
   <section id="contatti" class="section">
     <div class="container">
-      <span class="eyebrow">Vieni a Trovarci</span>
-      <h2>Dove Siamo</h2>
+      <span class="eyebrow" data-i18n="cont.eyebrow">Vieni a Trovarci</span>
+      <h2 data-i18n="cont.title">Dove Siamo</h2>
       <div class="contatti-grid">
         <div class="contatti-info">
           <div class="contatti-block">
-            <h3>Indirizzo</h3>
+            <h3 data-i18n="cont.address">Indirizzo</h3>
             <p>
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-icon"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
               Piazza XI Febbraio, 4<br>24050 Zanica (BG)
             </p>
           </div>
           <div class="contatti-block">
-            <h3>Telefono</h3>
+            <h3 data-i18n="cont.phone">Telefono</h3>
             <p>
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-icon"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
               <a href="tel:+39035670917">+39 035 670917</a>
             </p>
           </div>
-          <a href="tel:+39035670917" class="btn btn-primary btn-lg" style="margin-top: 1.5rem;">Chiamaci Ora</a>
+          <a href="tel:+39035670917" class="btn btn-primary btn-lg" style="margin-top: 1.5rem;" data-i18n="cont.cta">Chiamaci Ora</a>
         </div>
         <div class="contatti-map">
           <iframe
@@ -810,8 +818,8 @@
   <!-- Recensioni -->
   <section class="section section-muted">
     <div class="container">
-      <span class="eyebrow">Cosa Dicono i Clienti</span>
-      <h2>Recensioni</h2>
+      <span class="eyebrow" data-i18n="rev.eyebrow">Cosa Dicono i Clienti</span>
+      <h2 data-i18n="rev.title">Recensioni</h2>
       <div class="reviews-overall">
         <div class="reviews-stars">
           <svg class="star-icon-review filled" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
@@ -821,7 +829,7 @@
           <svg class="star-icon-review half" viewBox="0 0 24 24"><defs><linearGradient id="half-star-review"><stop offset="50%" stop-color="#f59e0b"/><stop offset="50%" stop-color="#f59e0b80"/></linearGradient></defs><polygon fill="url(#half-star-review)" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
         </div>
         <span class="reviews-score">4.5/5</span>
-        <span class="reviews-source">su Google</span>
+        <span class="reviews-source" data-i18n="rev.source">su Google</span>
       </div>
       <div class="reviews-grid">
         <div class="review-card">
@@ -835,8 +843,8 @@
               <svg class="star-sm" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
             </div>
           </div>
-          <p>&ldquo;Pizza buonissima, impasto leggero e ben cotto. Il galletto alla griglia &egrave; spettacolare! Prezzi onesti e personale gentile.&rdquo;</p>
-          <span class="review-date">2 mesi fa</span>
+          <p data-i18n="rev.1">&ldquo;Pizza buonissima, impasto leggero e ben cotto. Il galletto alla griglia &egrave; spettacolare! Prezzi onesti e personale gentile.&rdquo;</p>
+          <span class="review-date" data-i18n="rev.1.date">2 mesi fa</span>
         </div>
         <div class="review-card">
           <div class="review-header">
@@ -849,8 +857,8 @@
               <svg class="star-sm" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
             </div>
           </div>
-          <p>&ldquo;Locale accogliente e familiare. La carne della macelleria &egrave; di ottima qualit&agrave;. Consigliatissimo per chi cerca tradizione vera.&rdquo;</p>
-          <span class="review-date">1 mese fa</span>
+          <p data-i18n="rev.2">&ldquo;Locale accogliente e familiare. La carne della macelleria &egrave; di ottima qualit&agrave;. Consigliatissimo per chi cerca tradizione vera.&rdquo;</p>
+          <span class="review-date" data-i18n="rev.2.date">1 mese fa</span>
         </div>
         <div class="review-card">
           <div class="review-header">
@@ -863,8 +871,8 @@
               <svg class="star-sm empty" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
             </div>
           </div>
-          <p>&ldquo;Ottimo kebab e pizze ben farcite. Servizio veloce anche nei giorni di punta. Torner&ograve; sicuramente!&rdquo;</p>
-          <span class="review-date">3 settimane fa</span>
+          <p data-i18n="rev.3">&ldquo;Ottimo kebab e pizze ben farcite. Servizio veloce anche nei giorni di punta. Torner&ograve; sicuramente!&rdquo;</p>
+          <span class="review-date" data-i18n="rev.3.date">3 settimane fa</span>
         </div>
         <div class="review-card">
           <div class="review-header">
@@ -877,8 +885,8 @@
               <svg class="star-sm" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
             </div>
           </div>
-          <p>&ldquo;I calzoni sono i migliori della zona! Porzioni abbondanti e ingredienti freschi. Lo consiglio a tutti.&rdquo;</p>
-          <span class="review-date">1 settimana fa</span>
+          <p data-i18n="rev.4">&ldquo;I calzoni sono i migliori della zona! Porzioni abbondanti e ingredienti freschi. Lo consiglio a tutti.&rdquo;</p>
+          <span class="review-date" data-i18n="rev.4.date">1 settimana fa</span>
         </div>
       </div>
     </div>
@@ -889,10 +897,10 @@
     <div class="container footer-grid">
       <div class="footer-brand">
         <h3>Bella Zanica</h3>
-        <p class="footer-desc">Pizzeria dal cuore italiano</p>
+        <p class="footer-desc" data-i18n="footer.desc">Pizzeria dal cuore italiano</p>
       </div>
       <div class="footer-col">
-        <h4>Contatti</h4>
+        <h4 data-i18n="footer.contact">Contatti</h4>
         <p>
           <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-icon"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
           Piazza XI Febbraio, 4 &mdash; 24050 Zanica (BG)
@@ -903,13 +911,13 @@
         </p>
       </div>
       <div class="footer-col">
-        <h4>Orari</h4>
-        <p>Lun &ndash; Dom</p>
+        <h4 data-i18n="footer.hours">Orari</h4>
+        <p data-i18n="footer.days">Lun &ndash; Dom</p>
         <p>11:00 &ndash; 15:00 / 17:30 &ndash; 00:00</p>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; <span id="year"></span> Bella Zanica &mdash; Tutti i diritti riservati</p>
+      <p>&copy; <span id="year"></span> Bella Zanica &mdash; <span data-i18n="footer.rights">Tutti i diritti riservati</span></p>
     </div>
   </footer>
 

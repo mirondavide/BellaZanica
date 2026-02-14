@@ -1007,3 +1007,46 @@ footer {
 .review-card:nth-child(4).animate-on-scroll {
   transition-delay: 0.3s;
 }
+
+/* ===== Language Toggle ===== */
+.lang-toggle {
+  display: none;
+  align-items: center;
+  gap: 0.125rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 9999px;
+  padding: 0.125rem;
+}
+
+@media (min-width: 768px) {
+  .lang-toggle {
+    display: flex;
+  }
+}
+
+.lang-btn {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.25rem 0.625rem;
+  border: none;
+  background: none;
+  border-radius: 9999px;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.5);
+  transition: all 0.2s ease;
+  letter-spacing: 0.05em;
+}
+
+.lang-btn:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.lang-btn.active {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+.mobile-lang-toggle {
+  display: flex;
+}
