@@ -72,3 +72,15 @@ document.querySelectorAll('.section, .feature-card, .service-card, .gallery-item
   el.classList.add('animate-on-scroll');
   observer.observe(el);
 });
+
+// Menu tab switching
+document.querySelectorAll('.tab-btn[data-tab]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const tab = btn.dataset.tab;
+    const tabs = btn.closest('.tabs');
+    tabs.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    tabs.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('tab-' + tab).classList.add('active');
+  });
+});
