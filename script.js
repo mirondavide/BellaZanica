@@ -85,6 +85,28 @@ document.querySelectorAll('.tab-btn[data-tab]').forEach(btn => {
   });
 });
 
+// Tab scroll fade gradients
+const tabScroll = document.getElementById('tab-list-scroll');
+const tabWrapper = tabScroll ? tabScroll.parentElement : null;
+
+function updateFades() {
+  if (!tabScroll || !tabWrapper) return;
+  const atStart = tabScroll.scrollLeft <= 5;
+  const atEnd = tabScroll.scrollLeft + tabScroll.clientWidth >= tabScroll.scrollWidth - 5;
+  tabWrapper.classList.toggle('fade-left-visible', !atStart);
+  tabWrapper.classList.toggle('fade-left-hidden', atStart);
+  tabWrapper.classList.toggle('fade-right-hidden', atEnd);
+  // Hide scroll hint once user starts scrolling
+  var scrollHint = document.getElementById('scroll-hint');
+  if (scrollHint && !atStart) scrollHint.classList.add('hidden');
+}
+
+if (tabScroll && tabWrapper) {
+  updateFades();
+  tabScroll.addEventListener('scroll', updateFades, { passive: true });
+  window.addEventListener('resize', updateFades);
+}
+
 // ===== Language Translation System =====
 const translations = {
   en: {
@@ -127,6 +149,7 @@ const translations = {
     'menu.tab.fritture': 'Fried',
     'menu.tab.dessert': 'Dessert',
     'menu.tab.bibite': 'Drinks',
+    'menu.scroll': 'Scroll',
 
     // Classiche descriptions
     'c.margherita': 'tomato, mozzarella',

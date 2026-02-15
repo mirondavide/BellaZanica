@@ -570,6 +570,12 @@ img {
   font-style: italic;
 }
 
+/* Tab list wrapper with fade gradient (mobile) */
+.tab-list-wrapper {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
 .tab-list-scroll {
   display: flex;
   overflow-x: auto;
@@ -578,6 +584,7 @@ img {
   gap: 0.25rem;
   padding-bottom: 0.25rem;
   white-space: nowrap;
+  scroll-behavior: smooth;
 }
 
 .tab-list-scroll::-webkit-scrollbar {
@@ -586,6 +593,87 @@ img {
 
 .tab-list-scroll .tab-btn {
   flex-shrink: 0;
+}
+
+/* Fade gradients on edges */
+.tab-list-wrapper::before,
+.tab-list-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0.25rem;
+  width: 2.5rem;
+  z-index: 1;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.tab-list-wrapper::before {
+  left: 0;
+  background: linear-gradient(to right, hsl(35, 20%, 88%) 0%, transparent 100%);
+  opacity: 0;
+}
+
+.tab-list-wrapper::after {
+  right: 0;
+  background: linear-gradient(to left, hsl(35, 20%, 88%) 0%, transparent 100%);
+}
+
+.tab-list-wrapper.fade-left-hidden::before {
+  opacity: 0;
+}
+
+.tab-list-wrapper.fade-left-visible::before {
+  opacity: 1;
+}
+
+.tab-list-wrapper.fade-right-hidden::after {
+  opacity: 0;
+}
+
+/* Scroll hint arrow + text */
+.scroll-hint {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  margin-top: -0.75rem;
+  margin-bottom: 1.25rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--primary);
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+  animation: hint-nudge 1.5s ease-in-out infinite;
+}
+
+.scroll-hint svg {
+  color: var(--primary);
+}
+
+.scroll-hint.hidden {
+  opacity: 0;
+}
+
+@keyframes hint-nudge {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(5px); }
+}
+
+@media (min-width: 768px) {
+  .tab-list-wrapper::before,
+  .tab-list-wrapper::after {
+    display: none;
+  }
+  .scroll-hint {
+    display: none;
+  }
+  .tab-list-wrapper {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 /* ===== Gallery ===== */
