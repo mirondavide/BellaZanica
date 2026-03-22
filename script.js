@@ -346,7 +346,8 @@ const translations = {
     'footer.contact': 'Contact',
     'footer.hours': 'Hours',
     'footer.days': 'Mon \u2013 Sun',
-    'footer.rights': 'All rights reserved'
+    'footer.rights': 'All rights reserved',
+    'footer.madeBy': 'Website made by'
   }
 };
 
