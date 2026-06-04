@@ -1,6 +1,98 @@
 // Set current year in footer
 document.getElementById('year').textContent = new Date().getFullYear();
 
+// ===== Cookie Consent =====
+const MAPS_SRC = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2796.7!2d9.6844!3d45.6447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4781512e5e8e1b1d%3A0x1234567890abcdef!2sPiazza%20XI%20Febbraio%2C%204%2C%2024050%20Zanica%20BG!5e0!3m2!1sit!2sit!4v1234567890';
+
+function getCookieConsent() {
+  return localStorage.getItem('cookieConsent');
+}
+
+function loadGoogleMaps() {
+  var container = document.getElementById('map-container');
+  if (!container) return;
+  var placeholder = document.getElementById('map-placeholder');
+  if (placeholder) placeholder.remove();
+  if (!container.querySelector('iframe')) {
+    var iframe = document.createElement('iframe');
+    iframe.src = MAPS_SRC;
+    iframe.title = 'Bella Zanica - Mappa';
+    iframe.width = '100%';
+    iframe.height = '400';
+    iframe.allowFullscreen = true;
+    iframe.loading = 'lazy';
+    iframe.referrerPolicy = 'no-referrer-when-downgrade';
+    container.appendChild(iframe);
+  }
+}
+
+function setCookieConsent(accepted) {
+  localStorage.setItem('cookieConsent', accepted ? 'accepted' : 'rejected');
+  var banner = document.getElementById('cookie-banner');
+  if (banner) banner.style.display = 'none';
+  if (accepted) {
+    loadGoogleMaps();
+  }
+}
+
+// Show banner or apply saved consent on load
+(function initCookieConsent() {
+  var consent = getCookieConsent();
+  if (consent === 'accepted') {
+    loadGoogleMaps();
+  } else if (consent === null) {
+    var banner = document.getElementById('cookie-banner');
+    if (banner) banner.style.display = 'block';
+  }
+
+  var acceptBtn = document.getElementById('cookie-accept');
+  var rejectBtn = document.getElementById('cookie-reject');
+  var detailsToggle = document.getElementById('cookie-details-toggle');
+  var mapConsentBtn = document.getElementById('map-consent-btn');
+
+  if (acceptBtn) acceptBtn.addEventListener('click', function() { setCookieConsent(true); });
+  if (rejectBtn) rejectBtn.addEventListener('click', function() { setCookieConsent(false); });
+
+  if (detailsToggle) {
+    detailsToggle.addEventListener('click', function(e) {
+      e.preventDefault();
+      var details = document.getElementById('cookie-details');
+      if (details) details.style.display = details.style.display === 'none' ? 'block' : 'none';
+    });
+  }
+
+  if (mapConsentBtn) {
+    mapConsentBtn.addEventListener('click', function() {
+      setCookieConsent(true);
+    });
+  }
+
+  var resetBtn = document.getElementById('cookie-reset');
+  if (resetBtn) {
+    resetBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      localStorage.removeItem('cookieConsent');
+      // Remove map iframe and restore placeholder
+      var container = document.getElementById('map-container');
+      if (container) {
+        var iframe = container.querySelector('iframe');
+        if (iframe) iframe.remove();
+        if (!document.getElementById('map-placeholder')) {
+          var placeholder = document.createElement('div');
+          placeholder.id = 'map-placeholder';
+          placeholder.className = 'map-placeholder';
+          placeholder.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><p>La mappa &egrave; disattivata. Accetta i cookie per visualizzarla.</p><button class="btn btn-primary btn-sm" id="map-consent-btn">Attiva Mappa</button>';
+          container.appendChild(placeholder);
+          placeholder.querySelector('#map-consent-btn').addEventListener('click', function() { setCookieConsent(true); });
+        }
+      }
+      // Show banner again
+      var banner = document.getElementById('cookie-banner');
+      if (banner) banner.style.display = 'block';
+    });
+  }
+})();
+
 // Navbar scroll effect
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
@@ -341,11 +433,23 @@ const translations = {
     'rev.3.date': '3 weeks ago',
     'rev.4.date': '1 week ago',
 
+    // Cookie banner
+    'cookie.text': 'This site uses third-party services (Google Maps) that may set cookies and collect data. You can accept or reject the use of these services.',
+    'cookie.details': 'More details',
+    'cookie.detailsText': 'We use Google Maps to show our location. This service may set cookies and transfer data to Google servers. Fonts are hosted locally and do not involve any third-party data transfer. No data is collected directly by us. Your preference is saved in your browser (localStorage).',
+    'cookie.privacy': 'Privacy Policy',
+    'cookie.accept': 'Accept All',
+    'cookie.reject': 'Reject',
+    'cookie.mapBlocked': 'The map is disabled. Accept cookies to view it.',
+    'cookie.mapAccept': 'Enable Map',
+
     // Footer
     'footer.desc': 'Pizzeria with an Italian heart',
     'footer.contact': 'Contact',
     'footer.hours': 'Hours',
     'footer.days': 'Mon \u2013 Sun',
+    'footer.privacy': 'Privacy Policy',
+    'footer.cookieReset': 'Reset cookie preferences',
     'footer.rights': 'All rights reserved',
     'footer.madeBy': 'Website made by'
   }
