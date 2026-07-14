@@ -450,8 +450,7 @@ const translations = {
     'footer.days': 'Mon \u2013 Sun',
     'footer.privacy': 'Privacy Policy',
     'footer.cookieReset': 'Reset cookie preferences',
-    'footer.rights': 'All rights reserved',
-    'footer.madeBy': 'Website made by'
+    'footer.rights': 'All rights reserved'
   }
 };
 
